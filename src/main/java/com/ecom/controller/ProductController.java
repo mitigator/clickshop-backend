@@ -7,6 +7,7 @@ import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -66,6 +67,11 @@ public class ProductController {
 			, @RequestParam(defaultValue = "") String searchKey){
 		return productService.getAllProducts(pageNumber, searchKey);
 	}
+	@GetMapping("/cors-check")
+	public ResponseEntity<String> corsCheck() {
+	    return ResponseEntity.ok("CORS is active!");
+	}
+
 	
 	
 	@GetMapping({"/getProductDetailsById/{productId}"})

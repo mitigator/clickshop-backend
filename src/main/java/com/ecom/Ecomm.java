@@ -8,6 +8,7 @@ public class Ecomm {
 
     public static void main(String[] args) {
         SpringApplication.run(Ecomm.class, args);
+        System.out.println("Check");
     }
 
 }

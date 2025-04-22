@@ -19,9 +19,9 @@ public class CorsConfiguration {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedMethods(GET, POST, PUT, DELETE)
+                        .allowedMethods(GET, POST, PUT, DELETE,"OPTIONS")
                         .allowedHeaders("*")
-                        .allowedOriginPatterns("*")
+                        .allowedOrigins("http://localhost:4200", "https://68077231d29e719b2b8700ed--stupendous-marshmallow-35895f.netlify.app","https://silver-heliotrope-fbb646.netlify.app", "https://clickshop-backend.onrender.com/")
                         .allowCredentials(true);
             }
         };
